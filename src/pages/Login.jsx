@@ -26,7 +26,7 @@ const enviarDatos = async (event) => {
     
       if(res.data.user.email){
         alert('Welcome Vinilover')
-        window.location.href="./vinyls"
+        window.location.href="https://superlative-chebakia-5341e4.netlify.app/vinyls"
       }else{
         alert('no existe este usuario')
       }
