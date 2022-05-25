@@ -1,0 +1,100 @@
+
+.home-logo{
+
+width: 50%;
+height: 80%;
+background-color: brown;
+position: absolute;
+padding-left: 130px;
+border-top: 2px white solid;
+}
+
+.home-leyend{
+    border-top: 2px white solid;
+    width: 50%;
+    height: 80%;
+    background-color: blue;
+    position: absolute;
+    left: 50%;
+}
+
+.home-leyend h1{
+    
+    padding-left: 250px;
+    padding-top: 150px;
+    color: white;
+    padding-bottom: 30px;
+    
+    
+}
+
+.home-leyend p{
+    padding-left: 90px;
+    padding-top: 10px;
+    padding-right: 90px;
+    color: white;
+    padding-bottom: 1px;
+}
+
+.home-footer{
+    position: absolute;
+    background-color: white;
+    top: 90.1%;
+    width: 100%;
+    height: 60px;
+}
+
+.home-footer p{
+   
+    padding-top: 20px;
+   text-align: center;
+    
+}
+
+
+
+.vinyls_div{
+    border: 2px solid white;
+    padding: 70px;
+    background-color: brown;
+}
+
+.vinyls_ol{
+
+    display: flex;
+    
+   
+    box-sizing: border-box; 
+
+    
+  
+  }
+  
+  .vinyls_ol li{
+    
+    
+    list-style-type: none;
+    background-color:floralwhite;
+    width:350px;
+    height: 350px;
+    border: 6px solid transparent;
+    border-radius: 5px;
+    margin: 3px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    box-shadow: 1px 10px 10px 2px rgba(0,0,0,.2);
+  }
+
+  .vinyls_ol li:hover{
+    border: 6px solid #08a05c55;
+  }
+  
+  .vinyls_ol img{
+    width: 250px;
+    height: 250px;
+   
+  }
