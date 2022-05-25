@@ -27,7 +27,7 @@ const handleInputChange = (event) => {
 
 const enviarDatos = async (event) => {
     event.preventDefault()
-    const res = await axios.post('http://localhost:4000/api/register',datos)
+    const res = await axios.post('https://viniloveyou.herokuapp.com/api/register',datos)
     emailjs.sendForm('service_axak76g','template_8c2qi8v',event.target,'95zewK6xw8uoNG0qo')
     //.then(response => console.log(response))
     if(res.data.message.email){

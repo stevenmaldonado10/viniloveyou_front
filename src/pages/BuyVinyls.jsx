@@ -21,7 +21,7 @@ function BuyVinyls() {
 
    const fetchData = async () => {
     try {
-      const response = await  axios.post('http://localhost:4000/api/buy', {
+      const response = await  axios.post('https://viniloveyou.herokuapp.com/api/buy', {
         title: 'Buy vinyls',
         price : cartTotal,
       quantity: totalItems})
