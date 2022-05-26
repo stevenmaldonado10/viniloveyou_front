@@ -33,7 +33,7 @@ const enviarDatos = async (event) => {
         navigate("/vinyls")
   
         
-        console.log(res.data.user)
+        console.log(navigate)
       }else{
         alert('no existe este usuario')
       }
