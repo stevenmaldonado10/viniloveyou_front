@@ -30,7 +30,7 @@ const enviarDatos = async (event) => {
         //window.location.href="https://superlative-chebakia-5341e4.netlify.app/vinyls"
        
         
-        navigate("./vinyls")
+        navigate("/vinyls")
   
         
         console.log(res.data.user)
