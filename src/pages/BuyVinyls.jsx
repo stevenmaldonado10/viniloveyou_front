@@ -17,7 +17,7 @@ function BuyVinyls() {
     removeItem, 
     emptyCart } = useCart();
   
-   if(isEmpty) return <h1 className='text-center' >your cart is empty</h1> 
+   if(isEmpty) return window.location.href="./"
 
    const fetchData = async () => {
     try {
@@ -62,12 +62,12 @@ function BuyVinyls() {
 
 </Navbar>
 
-
+<h1 className='vinyls_h1'>Shopping Cart</h1>
 
    <section className='py-4 container'>
       <div className='row justify-content-center' >
     <div className='col-12'>
-      <h5>cart({totalUniqueItems} total Items:({totalItems}) )</h5>
+      
         <table className='table table-light table-hover m-0' >
           <tbody>
           {
@@ -78,15 +78,17 @@ function BuyVinyls() {
                     <img src={item.image} style={{height:'6rem'}} />
                   </td>
                   <td>{item.album}</td>
-                  <td>{item.price}</td>
+                  <td>{item.artist}</td>
+                  <td>${item.price}</td>
                   <td>Quantity ({item.quantity})</td>
-                  <td>
+                  <td>Total: ${item.price * item.quantity}</td>
+                  <td> 
                     <button className='btn btn-info ms-2' 
                     onClick={()=>updateItemQuantity(item.id, item.quantity-1)}>-</button>
                     <button className='btn btn-info ms-2'  
                     onClick={()=>updateItemQuantity(item.id, item.quantity+1)}>+</button>
                     <button className='btn btn-danger ms-2' 
-                     onClick={()=>removeItem(item.id)}>remove Item</button>
+                     onClick={()=>removeItem(item.id)}>Remove</button>
                   </td>
                 </tr>
                 )
@@ -97,11 +99,12 @@ function BuyVinyls() {
           </table>     
           </div>
           <div className='col-auto ms-auto'>
-            <h2>Total Price: $ {cartTotal}</h2>
+          
+            <h4 className='buyvinyls_h2'> Total Price: $ {cartTotal}</h4>
 
           </div>
           <div className='col-auto'>
-            <button className='btn btn-danger m-2' onClick={emptyCart} >Clear Cart</button>
+            <button className='btn btn-danger m-2' onClick={emptyCart} >Remove all</button>
             <button onClick={()=>fetchData()} className='btn btn-primary m-2' >Buy Now</button>
           </div>
 

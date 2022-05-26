@@ -7,6 +7,7 @@ import Nav from 'react-bootstrap/Nav'
 import {NavLink} from 'react-router-dom'
 import logo from '../images/vinylblue.svg'
 import {useCart} from 'react-use-cart'
+import carrito from '../images/carrito.svg'
 
 function Vinyls  ()  {
   const{items, 
@@ -46,7 +47,7 @@ function Vinyls  ()  {
 <Navbar collapseOnSelect expand="lg" variant='dark' bg='primary' >
          <img src={logo}  width="100" height="50" />
 
-        <Navbar.Brand as={NavLink} to="/">ViniLoveYou</Navbar.Brand>
+        <Navbar.Brand >ViniLoveYou</Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav'></Navbar.Toggle>
         <Navbar.Collapse id='responsive-navbar-nav' >
             
@@ -56,8 +57,8 @@ function Vinyls  ()  {
                 </Nav>
 
             <Nav >
-                <h5>{totalItems}</h5>
-                <Nav.Link as={NavLink} to="/vinyls/buy">Buy</Nav.Link>
+                <h5 className='vinyls_totalItem'>({totalItems})</h5>
+                <Nav.Link as={NavLink} to="/vinyls/buy"><img src={carrito}  width="30" height="30" /></Nav.Link>
                 <Nav.Link as={NavLink} to="/login">Log Out</Nav.Link>
                
             </Nav>
@@ -69,7 +70,7 @@ function Vinyls  ()  {
 
 
 
-    <h1 className='text-center mt-3'>All Items</h1>
+    <h1 className='vinyls_h1'>All Vinyls</h1>
     
     <section className='py-4 container'>     
       <div className='row justify-content-center'>

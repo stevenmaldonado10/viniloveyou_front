@@ -78,7 +78,7 @@ const enviarDatos = async (event) => {
         </Form.Group>
         
         <Button btn btn-primary  type="submit">
-          Submit
+          Login
         </Button>
     </Form>
     </Col>
