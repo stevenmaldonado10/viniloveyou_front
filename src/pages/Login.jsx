@@ -25,8 +25,9 @@ const enviarDatos = async (event) => {
     const res = await axios.post('https://viniloveyou.herokuapp.com/api/login',datos)
     
       if(res.data.user.email){
-        alert('Welcome Vinilover')
-        window.location.href="https://superlative-chebakia-5341e4.netlify.app/vinyls"
+        //alert('Welcome Vinilover')
+        //window.location.href="https://superlative-chebakia-5341e4.netlify.app/vinyls"
+        console.log(res.data.user)
       }else{
         alert('no existe este usuario')
       }
