@@ -20,6 +20,15 @@ const handleInputChange = (event) => {
     })
 }
 
+
+
+const vinyls = async () =>{
+  let navigate = useNavigate();
+
+      navigate("/vinyls");
+} 
+
+
 const enviarDatos = async (event) => {
     event.preventDefault()
    
@@ -28,10 +37,7 @@ const enviarDatos = async (event) => {
       if(res.data.user.email){
         //alert('Welcome Vinilover')
         //window.location.href="https://superlative-chebakia-5341e4.netlify.app/vinyls"
-        let navigate = useNavigate();
-
-        
-          navigate("/vinyls");
+        vinyls();
         
         
   
