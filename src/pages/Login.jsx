@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
-import {useNavigate} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 const axios = require('axios');
 
@@ -27,6 +27,10 @@ const enviarDatos = async (event) => {
       if(res.data.user.email){
         //alert('Welcome Vinilover')
         //window.location.href="https://superlative-chebakia-5341e4.netlify.app/vinyls"
+        let history = useHistory();
+
+  
+        history.push("/vinyls");
         console.log(res.data.user)
       }else{
         alert('no existe este usuario')
