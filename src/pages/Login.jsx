@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
-import {useNavigate} from 'react-router-dom';
+import {useHref} from 'react-router-dom';
 
 const axios = require('axios');
 
 const Login = () => {
+
+  
 
   const [datos, setDatos] = useState({
     email: '',
@@ -22,11 +24,8 @@ const handleInputChange = (event) => {
 
 
 
-const vinyls = async () =>{
-  let navigate = useNavigate();
 
-      navigate("/vinyls");
-} 
+ 
 
 
 const enviarDatos = async (event) => {
@@ -37,10 +36,10 @@ const enviarDatos = async (event) => {
       if(res.data.user.email){
         //alert('Welcome Vinilover')
         //window.location.href="https://superlative-chebakia-5341e4.netlify.app/vinyls"
-        vinyls();
         
         
-  
+        const ref = useHref();
+        ref("/");
         
         
       }else{
