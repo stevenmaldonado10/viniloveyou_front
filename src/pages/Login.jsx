@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
-import {useNavigate} from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 
 const axios = require('axios');
 
@@ -22,7 +22,7 @@ const handleInputChange = (event) => {
 
 const enviarDatos = async (event) => {
     event.preventDefault()
-    const navigate = useNavigate();
+   
     const res = await axios.post('https://viniloveyou.herokuapp.com/api/login',datos)
     
       if(res.data.user.email){
@@ -30,10 +30,10 @@ const enviarDatos = async (event) => {
         //window.location.href="https://superlative-chebakia-5341e4.netlify.app/vinyls"
        
         
-        navigate( to= "/vinyls")
+        <Navigate to="/vinyls" replace={true} />
   
         
-        console.log(navigate)
+        
       }else{
         alert('no existe este usuario')
       }
