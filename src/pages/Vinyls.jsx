@@ -78,7 +78,7 @@ const filtrar=(terminoBusqueda)=>{
             <Nav >
               
                
-                <input  value={busqueda} placeholder="Search album or artist" onChange={handleChange} />
+                <input  value={busqueda} placeholder="Search album, artist or genre" onChange={handleChange} />
 
 
                 <h5 className='vinyls_totalItem'>({totalItems})</h5>
