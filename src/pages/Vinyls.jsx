@@ -40,8 +40,9 @@ function Vinyls  ()  {
   }, [setList]);
 
 const handleChange = e=>{
-  setBusqueda(e.target.value)
-  filtrar(e.traget.value)
+  //setBusqueda(e.target.value)
+  //filtrar(e.traget.value)
+  console.log(e.target.value)
 }
 
 const filtrar=(terminoBusqueda)=>{
