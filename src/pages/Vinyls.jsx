@@ -20,14 +20,15 @@ function Vinyls  ()  {
     emptyCart } = useCart();
 
   const [list, setList] = useState([]);
-  const [busqueda, setBusqueda] = useState('hola');
+  const [busqueda, setBusqueda] = useState('');
+  const [vinyls, setVinyls] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await  axios.get('https://viniloveyou.herokuapp.com/api/vinyls')
         
-
+        setVinyls(response.data.message);
         setList(response.data.message);
         console.log(response.data);
       }
@@ -37,7 +38,7 @@ function Vinyls  ()  {
     };
 
     fetchData();
-  }, []);
+  }, [setList]);
 
 const handleChange = (e)=>{
   e.preventDefault()
@@ -55,7 +56,7 @@ const filtrar=(terminoBusqueda)=>{
     }
   });
 
-  setList(resultadoBusqueda);
+  setVinyls(resultadoBusqueda);
 }
 
   return (
@@ -97,7 +98,7 @@ const filtrar=(terminoBusqueda)=>{
     <section className='py-4 container'>     
       <div className='row justify-content-center'>
           {
-            list.map((item, index)=>{
+            vinyls.map((item, index)=>{
               return(
                 <ItemCard image={item.image} album={item.album} artist={item.artist} price={item.price} genre={item.genre} item={item} key={index} ></ItemCard>
               )
