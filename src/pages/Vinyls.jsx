@@ -51,6 +51,7 @@ const filtrar=(terminoBusqueda)=>{
   const resultadoBusqueda = list.filter((elemento)=>{
     if(elemento.album.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
     ||elemento.artist.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+    ||elemento.genre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
     ){
       return elemento;
     }
