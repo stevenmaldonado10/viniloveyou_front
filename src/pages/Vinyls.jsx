@@ -38,7 +38,7 @@ function Vinyls  ()  {
     };
 
     fetchData();
-  }, [setList]);
+  }, []);
 
 const handleChange = (e)=>{
   e.preventDefault()
