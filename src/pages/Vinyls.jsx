@@ -75,10 +75,11 @@ const filtrar=(terminoBusqueda)=>{
 
             <Nav >
               
-                <h5 className='vinyls_totalItem'>({totalItems})</h5>
-                <Nav.Link ><input  value={busqueda} placeholder="Search album or artist" onChange={handleChange} >
+               
+                <input  value={busqueda} placeholder="Search album or artist" onChange={handleChange} >
 
-</input></Nav.Link>
+</input>
+<h5 className='vinyls_totalItem'>({totalItems})</h5>
                 <Nav.Link as={NavLink} to="/vinyls/buy"><img src={carrito}  width="30" height="30" /></Nav.Link>
                 <Nav.Link as={NavLink} to="/">Log Out</Nav.Link>
                
