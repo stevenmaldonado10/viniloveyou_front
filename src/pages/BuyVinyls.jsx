@@ -24,7 +24,7 @@ function BuyVinyls() {
       const response = await  axios.post('https://viniloveyou.herokuapp.com/api/buy', {
         title: 'Buy vinyls',
         price : cartTotal,
-      quantity: totalItems})
+      quantity: 1})
       
       
       window.location.href=response.data
