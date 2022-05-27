@@ -74,6 +74,7 @@ function BuyVinyls() {
             items.map((item, index)=>{
               return(
                 <><tr>
+                  <td><strong>Vinyl</strong></td>
                   <td><strong>Album</strong></td>
                   <td><strong>Artist</strong></td>
                   <td><strong>Price</strong></td>

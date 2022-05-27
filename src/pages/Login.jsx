@@ -32,7 +32,7 @@ const enviarDatos = async (event) => {
     event.preventDefault()
    
     const res = await axios.post('https://viniloveyou.herokuapp.com/api/login',datos)
-    console.log(res.data.user.email);
+    
       if(res.data.user.email){
        // alert('Welcome Vinilover')
         window.location.href="./vinyls"
@@ -43,7 +43,7 @@ const enviarDatos = async (event) => {
         
       }else{
         alert('no existe este usuario')
-        console.log(res.data.user.email);
+        
       }
     
     
