@@ -21,7 +21,7 @@ function Vinyls  ()  {
 
   const [list, setList] = useState([]);
   const [busqueda, setBusqueda] = useState('');
-  const [vinyls, setVinyls] = useState('');
+  const [vinyls, setVinyls] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
