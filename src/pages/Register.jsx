@@ -30,11 +30,10 @@ const enviarDatos = async (event) => {
     const res = await axios.post('https://viniloveyou.herokuapp.com/api/register',datos)
     emailjs.sendForm('service_axak76g','template_8c2qi8v',event.target,'95zewK6xw8uoNG0qo')
     //.then(response => console.log(response))
-    if(res.data.message.email){
-      alert('Welcome Vinilover')
-      window.location.href="./login"
-    }
-    else{}
+    
+      alert('Verify your email!')
+      
+  
 }
 
   return (
