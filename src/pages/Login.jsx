@@ -43,6 +43,7 @@ const enviarDatos = async (event) => {
         
       }else{
         alert('no existe este usuario')
+        console.log(res.data.user.email);
       }
     
     
