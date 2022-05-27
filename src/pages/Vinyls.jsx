@@ -20,7 +20,7 @@ function Vinyls  ()  {
     emptyCart } = useCart();
 
   const [list, setList] = useState([]);
-  const [busqueda, setBusqueda] = useState('');
+  const [busqueda, setBusqueda] = useState('hola');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,7 +39,7 @@ function Vinyls  ()  {
     fetchData();
   }, [setList]);
 
-const handleChange = e=>{
+const handleChange = (e)=>{
   e.preventDefault()
   setBusqueda(e.target.value)
   filtrar(e.target.value)
@@ -76,11 +76,11 @@ const filtrar=(terminoBusqueda)=>{
             <Nav >
               
                
-                <input  value={busqueda} placeholder="Search album or artist" onChange={handleChange} >
+                <input  value={busqueda} placeholder="Search album or artist" onChange={handleChange} />
 
-</input>
 
-                <Nav.Link as={NavLink} to="/vinyls/buy"><h5 className='vinyls_totalItem'>({totalItems})</h5><img src={carrito}  width="30" height="30" /></Nav.Link>
+                <h5 className='vinyls_totalItem'>({totalItems})</h5>
+                <Nav.Link as={NavLink} to="/vinyls/buy"><img src={carrito}  width="30" height="30" /></Nav.Link>
                 <Nav.Link as={NavLink} to="/">Log Out</Nav.Link>
                
             </Nav>
