@@ -26,7 +26,7 @@ function BuyVinyls() {
         price : cartTotal,
       quantity: totalItems})
       
-      console.log(response.data);
+      
       window.location.href=response.data
     }
      catch (error) {

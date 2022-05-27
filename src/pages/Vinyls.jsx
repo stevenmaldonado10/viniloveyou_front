@@ -30,7 +30,7 @@ function Vinyls  ()  {
         
         setVinyls(response.data.message);
         setList(response.data.message);
-        console.log(response.data);
+        
       }
        catch (error) {
         console.log(error);
@@ -44,7 +44,7 @@ const handleChange = (e)=>{
   e.preventDefault()
   setBusqueda(e.target.value)
   filtrar(e.target.value)
-  console.log(e.target.value)
+ 
 }
 
 const filtrar=(terminoBusqueda)=>{

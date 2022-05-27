@@ -33,7 +33,7 @@ const enviarDatos = async (event) => {
     if(res.data.message.email){
       alert('Welcome Vinilover')
       window.location.href="./login"
-    console.log(res.data.message)}
+    }
     else{}
 }
 
