@@ -59,7 +59,7 @@ function Vinyls  ()  {
             <Nav >
                 <h5 className='vinyls_totalItem'>({totalItems})</h5>
                 <Nav.Link as={NavLink} to="/vinyls/buy"><img src={carrito}  width="30" height="30" /></Nav.Link>
-                <Nav.Link as={NavLink} to="/login">Log Out</Nav.Link>
+                <Nav.Link as={NavLink} to="/">Log Out</Nav.Link>
                
             </Nav>
 
