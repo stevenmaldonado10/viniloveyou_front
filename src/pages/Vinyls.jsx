@@ -42,7 +42,7 @@ function Vinyls  ()  {
 const handleChange = e=>{
   e.preventDefault()
   setBusqueda(e.target.value)
-  filtrar(e.traget.value)
+  filtrar(e.target.value)
   console.log(e.target.value)
 }
 
